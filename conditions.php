@@ -98,4 +98,104 @@ if (!($maceration == 12)){
     echo "J'aime les exemples";
 };
 
+
+echo '<br>';
+// quelques fonctions utiles à connaître et à utiliser
+
+// empty : vérifie si la valeur contenue dans ma variable est vide ou indéfinie;
+
+$age = 15;
+
+if (empty($age)){
+    echo "attention, vous n'avez pas renseigné votre âge";
+} else {
+    echo "Vous avez ".$age." ans.";
+};
+
+// isset permet de vérifier si la variable est définie
+echo "<br>";
+
+//$prenom = "Mathilde";
+
+if (isset($prenom)) {
+    echo "Ma variable a bien été définie";
+} else {
+    echo "attention cette variable n'existe pas";
+};
+
+// Qu'est-ce que l'opérateur ternaire ? Dans la réalité, on se retrouve souvent à définir une variable en fonction d'un test ou bien de déclencher des actions en fonction d'un test c'est-à-dire d'une condition
+
+// Par exemple, quelle heure est-il ?
+echo '<br>';
+$heure = 12;
+
+// S'il est moins de 20h, je suis en forme, sinon je suis fatiguée
+
+$etat = $heure < 20 ? 'je suis en forme' : 'je suis fatiguée';
+echo $etat ;
+
+/*Les boucles nous permettent d'exécuter une MEME série d'instructions plusieurs fois. Par exemple si j'ai envie d'écrire 20 <li> avec html je suis obligé de faire du copié-collé (ou emmet mais du coup ça va beaucoup plus vite), avec PHP je vais pouvoir les générer beaucoup plus rapidement.
+
+Nous avons le for, le while et le foreach
+
+FOR 
+
+Afficher les nombre de 1 à 99
+
+En java 
+for (int i=1; i < 100 ; i++) {
+    system.out.print(i);
+}
+EN PHP
+*/
+echo '<br>';
+for ($i = 1 ; $i < 100 ; $i++) {
+    echo $i;
+    echo "<br>";
+}
+
+/* Dans une boucle de type for, j'ai donc mes 3 instructions essentielles : 
+for (initialisation, condition, incrementation)
+*/
+
+/* la boucle while permet de boucler tant que la condition définie dans le while est vrai. Tant qu'elle est vraie on boucle, dès qu'elle est fausse, la boucle s'arrête. */
+
+$economies = 0;
+
+while ($economies < 100) {
+    $economies+=10;
+    echo "Je continue de travailler";
+    echo '<br>';
+}
+echo "J'ai suffisamment d'économies";
+
+// La boucle do-while La principale différence par rapport à la boucle while est que la première itération de la boucle do-while est toujours exécutée (l'expression n'est testée qu'à la fin de l'itération), ce qui n'est pas le cas lorsque vous utilisez une boucle while (la condition est vérifiée dès le début de chaque itération, et si elle s'avère FALSE dès le début, la boucle sera immédiatement arrêtée).
+echo '<br>';
+$i = 5;
+do {
+    echo $i;
+} while ($i > 9);
+
+$fruits = ["cerise", "banane", "pomme", "kiwi", "citrons"];
+
+// Ici via mon foreach ma boucle est passée sur chacun des éléments de mon tableau et je lui ai demandé d'afficher la valeur de ces éléments 
+
+foreach($fruits as $fruit){
+    echo $fruit.'<br>';
+};
+
+$fruits = [
+    "rouge" => "cerise", 
+    "jaune" => "banane", 
+    "ronde" => "pomme", 
+    "vert" => "kiwi", 
+    "jauneouvert" => "citrons"
+];
+
+// Ici en utilisant foreach j'ai à la fois récupéré la valeur de mon élément dans le tableau et la valeur de sa clé associée.
+
+foreach($fruits as $index => $fruit) {
+    echo "le ".$fruit." c'est ".$index."<br>";
+}
+
 ?>
