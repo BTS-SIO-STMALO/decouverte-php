@@ -58,8 +58,9 @@ Attention echo permet d'afficher des données scalaires mais pas des données co
 */
 var_dump($fruits);
 
-// un exemple de fonction qui permet de rajouter une donnée dans un tableau. 
+// un exemple de fonction qui permet de rajouter une donnée dans un tableau :
 array_push($fruits, "poires");
+// Une autre manière de rajouter une donnée dans un tableau :
 $fruits[] = "framboise";
 
 var_dump($fruits);
@@ -70,9 +71,8 @@ echo $fruits[5];
 
 /*
 L'index d'un tableau, s'il n'est pas spécifié commence toujours à 0.
-Néanmoins si on le souhaite, on peut soi-même définir les valeurs de l'index d'un tableau.
+Néanmoins si on le souhaite, on peut soi-même définir les valeurs de l'index d'un tableau, c'est ce qu'on appelle un tableau associatif
 */
-// Ceci s'appelle un tableau associatif
 
 $fruits = [
     "rouge" => "cerise", 
@@ -105,7 +105,7 @@ int = un nombre entier
 float = un nombre décimal
 boolean = vrai ou faux
 
-Les constantes. Une constante ne peut jamais être modifiée pendant l'exécution d'un script. Par convention, les constantes sont toujours definis en majuscule. 
+Les constantes. Une constante ne peut jamais être modifiée pendant l'exécution d'un script. Par convention, les constantes sont toujours définies en majuscule. 
 
 Les données composées (plusieurs valeurs scalaires)
 
@@ -113,8 +113,86 @@ array = tableau
 
 */
 
+/*
+En php on peut réaliser toutes les opérations arithmétiques que l'on connait 
+*/
 
+// Je veux faire une addition 
 
+echo 4+4;
+
+// Une soustraction 
+echo '<br>';
+echo 10-5;
+echo '<br>';
+echo 5*5;
+echo '<br>';
+echo 25/10;
+echo '<br>';
+
+// je peux faire la même chose avec des variables
+$nombreUn = 12;
+$nombreDeux = 5;
+
+echo $nombreUn+$nombreDeux;
+echo "<br>";
+// La concaténation 
+$prenom = "Mathilde";
+$age = 34;
+
+echo "Bonjour je suis ".$prenom." j'ai ".$age." ans.";
+
+// L'échappement va nous servir pour utiliser à nouveau un caractère déjà utilisé par PHP. Le caractère d'échappement est le \
+
+// Affiche : Il m'a dit que j'étais balèze !
+echo "Il m'a dit que j'étais balèze !";
+echo "<br>";
+// Affiche : Je suis "balèze" !
+echo 'Je suis "balèze" !';
+echo "<br>";
+// Affiche : Il m'a dit que j'étais "balèze" !
+echo 'Il m\'a dit que j\'étais "balèze" ! ';
+echo '<br>';
+/* 
+PHP offre quelques raccourcis pour modifier une varialbe
+Par exemple, on va vouloir souvent INCREMENTER une variable, c'est à dire augmenter sa valeur (exemple ++ augmente la valeur d'une variable de 1)
+*/
+
+// J'ai des sous à la banque 
+$economies = 1000;
+
+// Tous les jours, je rajoute un euros d'économies 
+$economies++;
+
+echo $economies;
+// Ici je soustrais 1 euro à mes économies
+$economies--;
+echo '<br>';
+echo $economies;
+
+/* Les opérateurs combinés
+Ok c'est sympa de rajouter ou de soustraire 1 mais si j'ai envie de rajouter ou de soustraire plus que 1 ... ? Les opérateurs combinés vont m'y aider
+*/
+
+$phrase = "J'ai économisé ";
+$economies = 1000;
+$loyer = 600;
+$salaire = 1500;
+
+// J'ai décidé de mettre tout mon salaire dans mes économies :
+$economies += $salaire;
+
+echo "<br>";
+echo $economies;
+echo "<br>";
+
+echo ($economies - $loyer) ;
+echo "<br>";
+echo $economies ;
+echo "<br>";
+$economies -= $loyer;
+echo $economies;
+echo "<br>";
 ?>
 
 <h2>Ici je suis bien en html</h2>
