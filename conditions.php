@@ -207,7 +207,32 @@ function HelloWorld() {
 
 HelloWorld();
 
+function surface(int $largeur, int $longueur){
+    $surface = $largeur*$longueur;
+    return $surface;
+};
 
+$surfaceCarré = surface(10,15);
+var_dump($surfaceCarré);
+
+$surfaceCarré2 = surface(12, 18);
+var_dump($surfaceCarré2);  
+
+function perimetre(int $largeur, int $longueur){
+    $perimetre = 2 * ($largeur+$longueur);
+    return $perimetre;
+};
+
+$calculperimetre = perimetre(5,10);
+var_dump($calculperimetre);
+
+function doCoffee(string $water, string $coffeeSeeds) {
+    $cupOfCoffee = "Cup ". $water ." avec ". $coffeeSeeds;
+    return $cupOfCoffee;
+};
+
+$tassedeCafe = doCoffee("eau", "arabica");
+var_dump($tassedeCafe);
 
 
 ?>
