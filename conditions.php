@@ -226,13 +226,13 @@ function perimetre(int $largeur, int $longueur){
 $calculperimetre = perimetre(5,10);
 var_dump($calculperimetre);
 
+
 function doCoffee(string $water, string $coffeeSeeds) {
-    $cupOfCoffee = "Cup ". $water ." avec ". $coffeeSeeds;
+    $cupOfCoffee = "Une tasse de ". $water ." avec ". $coffeeSeeds;
     return $cupOfCoffee;
 };
 
-$tassedeCafe = doCoffee("eau", "arabica");
-var_dump($tassedeCafe);
-
+$tasseDeCafe = doCoffee("eau", "arabica");
+var_dump($tasseDeCafe);
 
 ?>
