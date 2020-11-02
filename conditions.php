@@ -198,4 +198,16 @@ foreach($fruits as $index => $fruit) {
     echo "le ".$fruit." c'est ".$index."<br>";
 }
 
+// Je définis une fonction 
+
+function HelloWorld() {
+    $message = "Hello World";
+    echo $message; 
+};
+
+HelloWorld();
+
+
+
+
 ?>
